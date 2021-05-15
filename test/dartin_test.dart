@@ -1,6 +1,5 @@
-import 'package:dartin/dartin.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:dartin/dartin.dart';
 import '../example/lib/dummy.dart';
 
 void main() {
@@ -18,7 +17,7 @@ void main() {
       single<Dummy>(({params}) =>  dummy2 ),
     ])
     ..withScope(params, [
-      factory<Dummy>(({params}) => Dummy(params.get(0))),
+      factory<Dummy>(({params}) => Dummy(params!.get(0))),
     ]);
 
   startDartIn([m]);
